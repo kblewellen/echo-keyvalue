@@ -1,0 +1,171 @@
+KP: 6832: Using 16 for local hash table size (same as merge frequency), 1610000 for master hash table size
+KP: 6832: Total memory allocation size (just evaluation, not kv stores themselves) could be up to 0 bytes (0 MB)
+Will create 161000 random integers for each child thread
+Now starting evaluation for key-value store: kp_kvstore
+On 16 cores
+Running on storage platform: disk
+Starting single-threaded tests
+
+*** BEGINING SINGLE THREADED TESTS***
+
+***NOW DOING LATENCY TEST ON INDIVIDUAL FUNCTIONS ***
+For put-insert: 
+	 time elapsed 0:34344 (sec:usec) = 34344 usecs 
+	 iterations 10000 (merge every 8 -> 1250 merges)
+	 average cost 3.434400 usecs
+	 Conflicts: 0 (of 1249 commits)
+
+For put-append: 
+	 time elapsed 0:94261 (sec:usec) = 94261 usecs 
+	 iterations 30000 (merge every 8 -> 3750 merges)
+	 average cost 3.142033 usecs
+	 Conflicts: 0 (of 3747 commits)
+
+For get: 
+	 time elapsed 0:65390 (sec:usec) = 65390 usecs 
+	 iterations 30000 (merge every 8 -> 3750 merges)
+	 average cost 2.179667 usecs
+	 Conflicts: 0 (of 0 commits)
+
+For delete: 
+	 time elapsed 0:56931 (sec:usec) = 56931 usecs 
+	 iterations 30000 (merge every 8 -> 3750 merges)
+	 average cost 1.897700 usecs
+	 Conflicts: 0 (of 3747 commits)
+
+
+*** CONCLUDING SINGLE THREADED TESTS***
+
+Starting multi-threaded tests: num_threads=10, NUM_CPUS=16
+KP: 6832: pinned new thread to CPU=0x0
+KP: 6832: pinned new thread to CPU=0x1
+KP: 6832: pinned new thread to CPU=0x2
+KP: 6832: pinned new thread to CPU=0x3
+KP: 6832: pinned new thread to CPU=0x4
+KP: 6832: pinned new thread to CPU=0x5
+KP: 6832: pinned new thread to CPU=0x6
+KP: 6832: pinned new thread to CPU=0x7
+KP: 6832: pinned new thread to CPU=0x8
+KP: 6832: pinned new thread to CPU=0x9
+KP: 6832: sleeping to allow threads enough time
+KP: 6832: waking up from sleep (0)
+For multithreaded run ramp r:-1-w:30-u:70-d:1
+	 3443399 total ops (3407975 puts + 0 gets + 35424 dels)
+	 2000000 in runtime (usecs) = 2 secs = 1.721699 ops/usec
+	 1703987.500000 op/sec put throughput (all threads)
+	 0.000000 op/sec get throughput (all threads)
+	 17712.001953 op/sec del throughput (all threads)
+	 1721699.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 386912 (of 430426 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+KP: 6832: pinned new thread to CPU=0x0
+KP: 6832: pinned new thread to CPU=0x1
+KP: 6832: pinned new thread to CPU=0x2
+KP: 6832: pinned new thread to CPU=0x3
+KP: 6832: pinned new thread to CPU=0x4
+KP: 6832: pinned new thread to CPU=0x5
+KP: 6832: pinned new thread to CPU=0x6
+KP: 6832: pinned new thread to CPU=0x7
+KP: 6832: pinned new thread to CPU=0x8
+KP: 6832: pinned new thread to CPU=0x9
+KP: 6832: sleeping to allow threads enough time
+KP: 6832: waking up from sleep (0)
+For multithreaded run ramp r:19-w:24-u:56-d:1
+	 4102790 total ops (3237136 puts + 824030 gets + 41624 dels)
+	 2000000 in runtime (usecs) = 2 secs = 2.051395 ops/usec
+	 1618568.000000 op/sec put throughput (all threads)
+	 412015.000000 op/sec get throughput (all threads)
+	 20812.000000 op/sec del throughput (all threads)
+	 2051395.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 368281 (of 409845 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+KP: 6832: pinned new thread to CPU=0x0
+KP: 6832: pinned new thread to CPU=0x1
+KP: 6832: pinned new thread to CPU=0x2
+KP: 6832: pinned new thread to CPU=0x3
+KP: 6832: pinned new thread to CPU=0x4
+KP: 6832: pinned new thread to CPU=0x5
+KP: 6832: pinned new thread to CPU=0x6
+KP: 6832: pinned new thread to CPU=0x7
+KP: 6832: pinned new thread to CPU=0x8
+KP: 6832: pinned new thread to CPU=0x9
+KP: 6832: sleeping to allow threads enough time
+KP: 6832: waking up from sleep (0)
+For multithreaded run ramp r:39-w:18-u:42-d:1
+	 5028669 total ops (2968196 puts + 2009604 gets + 50869 dels)
+	 2000000 in runtime (usecs) = 2 secs = 2.514334 ops/usec
+	 1484098.000000 op/sec put throughput (all threads)
+	 1004802.000000 op/sec get throughput (all threads)
+	 25434.500000 op/sec del throughput (all threads)
+	 2514334.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 338008 (of 377384 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+KP: 6832: pinned new thread to CPU=0x0
+KP: 6832: pinned new thread to CPU=0x1
+KP: 6832: pinned new thread to CPU=0x2
+KP: 6832: pinned new thread to CPU=0x3
+KP: 6832: pinned new thread to CPU=0x4
+KP: 6832: pinned new thread to CPU=0x5
+KP: 6832: pinned new thread to CPU=0x6
+KP: 6832: pinned new thread to CPU=0x7
+KP: 6832: pinned new thread to CPU=0x8
+KP: 6832: pinned new thread to CPU=0x9
+KP: 6832: sleeping to allow threads enough time
+KP: 6832: pinned new thread to CPU=0x0
+KP: 6832: pinned new thread to CPU=0x1
+KP: 6832: pinned new thread to CPU=0x2
+KP: 6832: pinned new thread to CPU=0x3
+KP: 6832: pinned new thread to CPU=0x4
+KP: 6832: pinned new thread to CPU=0x5
+KP: 6832: pinned new thread to CPU=0x6
+KP: 6832: pinned new thread to CPU=0x7
+KP: 6832: pinned new thread to CPU=0x8
+KP: 6832: pinned new thread to CPU=0x9
+KP: 6832: sleeping to allow threads enough time
+KP: 6832: waking up from sleep (0)
+For multithreaded run ramp r:79-w:6-u:14-d:1
+	 9070599 total ops (1720458 puts + 7259255 gets + 90886 dels)
+	 2000000 in runtime (usecs) = 2 secs = 4.535299 ops/usec
+	 860229.000000 op/sec put throughput (all threads)
+	 3629627.500000 op/sec get throughput (all threads)
+	 45443.000000 op/sec del throughput (all threads)
+	 4535299.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 196719 (of 226423 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+KP: 6832: pinned new thread to CPU=0x0
+KP: 6832: pinned new thread to CPU=0x1
+KP: 6832: pinned new thread to CPU=0x2
+KP: 6832: pinned new thread to CPU=0x3
+KP: 6832: pinned new thread to CPU=0x4
+KP: 6832: pinned new thread to CPU=0x5
+KP: 6832: pinned new thread to CPU=0x6
+KP: 6832: pinned new thread to CPU=0x7
+KP: 6832: pinned new thread to CPU=0x8
+KP: 6832: pinned new thread to CPU=0x9
+KP: 6832: sleeping to allow threads enough time
+KP: 6832: waking up from sleep (0)
+For multithreaded run ramp r:99-w:0-u:0-d:1
+	 18517243 total ops (0 puts + 18334516 gets + 182727 dels)
+	 2000000 in runtime (usecs) = 2 secs = 9.258622 ops/usec
+	 0.000000 op/sec put throughput (all threads)
+	 9167259.000000 op/sec get throughput (all threads)
+	 91363.500000 op/sec del throughput (all threads)
+	 9258622.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 19648 (of 22844 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+***CONCLUDING THREAD EVALUATION***

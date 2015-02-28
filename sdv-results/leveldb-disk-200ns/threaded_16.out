@@ -1,0 +1,227 @@
+KP: 5232: Using 16 for local hash table size (same as merge frequency), 1610000 for master hash table size
+KP: 5232: Total memory allocation size (just evaluation, not kv stores themselves) could be up to 0 bytes (0 MB)
+Will create 100625 random integers for each child thread
+Now starting evaluation for key-value store: LevelDB
+On 16 cores
+Running on storage platform: disk
+Starting single-threaded tests
+
+*** BEGINING SINGLE THREADED TESTS***
+
+ON PATH /home/katelin/leveldb_client_name
+***NOW DOING LATENCY TEST ON INDIVIDUAL FUNCTIONS ***
+For put-insert: 
+	 time elapsed 5:43896 (sec:usec) = 5043896 usecs 
+	 iterations 1000 (merge every 8 -> 125 merges)
+	 average cost 5043.895996 usecs
+	 Conflicts: 0 (of 124 commits)
+
+For put-append: 
+	 time elapsed 13:414486 (sec:usec) = 13414486 usecs 
+	 iterations 3000 (merge every 8 -> 375 merges)
+	 average cost 4471.495117 usecs
+	 Conflicts: 0 (of 372 commits)
+
+For get: 
+	 time elapsed 0:104926 (sec:usec) = 104926 usecs 
+	 iterations 3000 (merge every 8 -> 375 merges)
+	 average cost 34.975334 usecs
+	 Conflicts: 0 (of 0 commits)
+
+For delete: 
+	 time elapsed 15:4820 (sec:usec) = 15004820 usecs 
+	 iterations 3000 (merge every 8 -> 375 merges)
+	 average cost 5001.606445 usecs
+	 Conflicts: 0 (of 372 commits)
+
+
+*** CONCLUDING SINGLE THREADED TESTS***
+
+Starting multi-threaded tests: num_threads=16, NUM_CPUS=16
+ON PATH /home/katelin/leveldb_client_name
+KP: 5232: pinned new thread to CPU=0x0
+KP: 5232: pinned new thread to CPU=0x1
+KP: 5232: pinned new thread to CPU=0x2
+KP: 5232: pinned new thread to CPU=0x3
+KP: 5232: pinned new thread to CPU=0x4
+KP: 5232: pinned new thread to CPU=0x5
+KP: 5232: pinned new thread to CPU=0x6
+KP: 5232: pinned new thread to CPU=0x7
+KP: 5232: pinned new thread to CPU=0x8
+KP: 5232: pinned new thread to CPU=0x9
+KP: 5232: pinned new thread to CPU=0xA
+KP: 5232: pinned new thread to CPU=0xB
+KP: 5232: pinned new thread to CPU=0xC
+KP: 5232: pinned new thread to CPU=0xD
+KP: 5232: pinned new thread to CPU=0xE
+KP: 5232: pinned new thread to CPU=0xF
+KP: 5232: sleeping to allow threads enough time
+KP: 5232: waking up from sleep (0)
+For multithreaded run ramp r:-1-w:30-u:70-d:1
+	 496 total ops (490 puts + 0 gets + 6 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000248 ops/usec
+	 245.000000 op/sec put throughput (all threads)
+	 0.000000 op/sec get throughput (all threads)
+	 3.000000 op/sec del throughput (all threads)
+	 248.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 62 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /home/katelin/leveldb_client_name
+KP: 5232: pinned new thread to CPU=0x0
+KP: 5232: pinned new thread to CPU=0x1
+KP: 5232: pinned new thread to CPU=0x2
+KP: 5232: pinned new thread to CPU=0x3
+KP: 5232: pinned new thread to CPU=0x4
+KP: 5232: pinned new thread to CPU=0x5
+KP: 5232: pinned new thread to CPU=0x6
+KP: 5232: pinned new thread to CPU=0x7
+KP: 5232: pinned new thread to CPU=0x8
+KP: 5232: pinned new thread to CPU=0x9
+KP: 5232: pinned new thread to CPU=0xA
+KP: 5232: pinned new thread to CPU=0xB
+KP: 5232: pinned new thread to CPU=0xC
+KP: 5232: pinned new thread to CPU=0xD
+KP: 5232: pinned new thread to CPU=0xE
+KP: 5232: pinned new thread to CPU=0xF
+KP: 5232: sleeping to allow threads enough time
+KP: 5232: waking up from sleep (0)
+For multithreaded run ramp r:19-w:24-u:56-d:1
+	 676 total ops (527 puts + 140 gets + 9 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000338 ops/usec
+	 263.500000 op/sec put throughput (all threads)
+	 70.000000 op/sec get throughput (all threads)
+	 4.500000 op/sec del throughput (all threads)
+	 338.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 67 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /home/katelin/leveldb_client_name
+KP: 5232: pinned new thread to CPU=0x0
+KP: 5232: pinned new thread to CPU=0x1
+KP: 5232: pinned new thread to CPU=0x2
+KP: 5232: pinned new thread to CPU=0x3
+KP: 5232: pinned new thread to CPU=0x4
+KP: 5232: pinned new thread to CPU=0x5
+KP: 5232: pinned new thread to CPU=0x6
+KP: 5232: pinned new thread to CPU=0x7
+KP: 5232: pinned new thread to CPU=0x8
+KP: 5232: pinned new thread to CPU=0x9
+KP: 5232: pinned new thread to CPU=0xA
+KP: 5232: pinned new thread to CPU=0xB
+KP: 5232: pinned new thread to CPU=0xC
+KP: 5232: pinned new thread to CPU=0xD
+KP: 5232: pinned new thread to CPU=0xE
+KP: 5232: pinned new thread to CPU=0xF
+KP: 5232: sleeping to allow threads enough time
+KP: 5232: waking up from sleep (0)
+For multithreaded run ramp r:39-w:18-u:42-d:1
+	 780 total ops (475 puts + 300 gets + 5 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000390 ops/usec
+	 237.500000 op/sec put throughput (all threads)
+	 150.000000 op/sec get throughput (all threads)
+	 2.500000 op/sec del throughput (all threads)
+	 390.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 60 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /home/katelin/leveldb_client_name
+KP: 5232: pinned new thread to CPU=0x0
+KP: 5232: pinned new thread to CPU=0x1
+KP: 5232: pinned new thread to CPU=0x2
+KP: 5232: pinned new thread to CPU=0x3
+KP: 5232: pinned new thread to CPU=0x4
+KP: 5232: pinned new thread to CPU=0x5
+KP: 5232: pinned new thread to CPU=0x6
+KP: 5232: pinned new thread to CPU=0x7
+KP: 5232: pinned new thread to CPU=0x8
+KP: 5232: pinned new thread to CPU=0x9
+KP: 5232: pinned new thread to CPU=0xA
+KP: 5232: pinned new thread to CPU=0xB
+KP: 5232: pinned new thread to CPU=0xC
+KP: 5232: pinned new thread to CPU=0xD
+KP: 5232: pinned new thread to CPU=0xE
+KP: 5232: pinned new thread to CPU=0xF
+KP: 5232: sleeping to allow threads enough time
+KP: 5232: waking up from sleep (0)
+For multithreaded run ramp r:59-w:12-u:28-d:1
+	 1225 total ops (507 puts + 705 gets + 13 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000613 ops/usec
+	 253.500000 op/sec put throughput (all threads)
+	 352.500000 op/sec get throughput (all threads)
+	 6.500000 op/sec del throughput (all threads)
+	 612.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 65 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /home/katelin/leveldb_client_name
+KP: 5232: pinned new thread to CPU=0x0
+KP: 5232: pinned new thread to CPU=0x1
+KP: 5232: pinned new thread to CPU=0x2
+KP: 5232: pinned new thread to CPU=0x3
+KP: 5232: pinned new thread to CPU=0x4
+KP: 5232: pinned new thread to CPU=0x5
+KP: 5232: pinned new thread to CPU=0x6
+KP: 5232: pinned new thread to CPU=0x7
+KP: 5232: pinned new thread to CPU=0x8
+KP: 5232: pinned new thread to CPU=0x9
+KP: 5232: pinned new thread to CPU=0xA
+KP: 5232: pinned new thread to CPU=0xB
+KP: 5232: pinned new thread to CPU=0xC
+KP: 5232: pinned new thread to CPU=0xD
+KP: 5232: pinned new thread to CPU=0xE
+KP: 5232: pinned new thread to CPU=0xF
+KP: 5232: sleeping to allow threads enough time
+KP: 5232: waking up from sleep (0)
+For multithreaded run ramp r:79-w:6-u:14-d:1
+	 2278 total ops (458 puts + 1790 gets + 30 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.001139 ops/usec
+	 229.000000 op/sec put throughput (all threads)
+	 895.000000 op/sec get throughput (all threads)
+	 15.000000 op/sec del throughput (all threads)
+	 1139.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 61 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /home/katelin/leveldb_client_name
+KP: 5232: pinned new thread to CPU=0x0
+KP: 5232: pinned new thread to CPU=0x1
+KP: 5232: pinned new thread to CPU=0x2
+KP: 5232: pinned new thread to CPU=0x3
+KP: 5232: pinned new thread to CPU=0x4
+KP: 5232: pinned new thread to CPU=0x5
+KP: 5232: pinned new thread to CPU=0x6
+KP: 5232: pinned new thread to CPU=0x7
+KP: 5232: pinned new thread to CPU=0x8
+KP: 5232: pinned new thread to CPU=0x9
+KP: 5232: pinned new thread to CPU=0xA
+KP: 5232: pinned new thread to CPU=0xB
+KP: 5232: pinned new thread to CPU=0xC
+KP: 5232: pinned new thread to CPU=0xD
+KP: 5232: pinned new thread to CPU=0xE
+KP: 5232: pinned new thread to CPU=0xF
+KP: 5232: sleeping to allow threads enough time
+KP: 5232: waking up from sleep (0)
+For multithreaded run ramp r:99-w:0-u:0-d:1
+	 56691 total ops (0 puts + 56107 gets + 584 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.028345 ops/usec
+	 0.000000 op/sec put throughput (all threads)
+	 28053.500000 op/sec get throughput (all threads)
+	 292.000000 op/sec del throughput (all threads)
+	 28345.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 73 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 2623
+***END OF RAMP-UP-THREADS OUTPUT***
+
+***CONCLUDING THREAD EVALUATION***
