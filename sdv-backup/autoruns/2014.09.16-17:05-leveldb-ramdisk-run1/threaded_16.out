@@ -1,0 +1,227 @@
+KP: 3824: Using 16 for local hash table size (same as merge frequency), 1610000 for master hash table size
+KP: 3824: Total memory allocation size (just evaluation, not kv stores themselves) could be up to 0 bytes (0 MB)
+Will create 100625 random integers for each child thread
+Now starting evaluation for key-value store: LevelDB
+On 16 cores
+Running on storage platform: ramdisk
+Starting single-threaded tests
+
+*** BEGINING SINGLE THREADED TESTS***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+***NOW DOING LATENCY TEST ON INDIVIDUAL FUNCTIONS ***
+For put-insert: 
+	 time elapsed 4:261625 (sec:usec) = 4261625 usecs 
+	 iterations 1000 (merge every 8 -> 125 merges)
+	 average cost 4261.625000 usecs
+	 Conflicts: 0 (of 124 commits)
+
+For put-append: 
+	 time elapsed 13:771891 (sec:usec) = 13771891 usecs 
+	 iterations 3000 (merge every 8 -> 375 merges)
+	 average cost 4590.630371 usecs
+	 Conflicts: 0 (of 372 commits)
+
+For get: 
+	 time elapsed 0:103269 (sec:usec) = 103269 usecs 
+	 iterations 3000 (merge every 8 -> 375 merges)
+	 average cost 34.423000 usecs
+	 Conflicts: 0 (of 0 commits)
+
+For delete: 
+	 time elapsed 13:489912 (sec:usec) = 13489912 usecs 
+	 iterations 3000 (merge every 8 -> 375 merges)
+	 average cost 4496.637207 usecs
+	 Conflicts: 0 (of 372 commits)
+
+
+*** CONCLUDING SINGLE THREADED TESTS***
+
+Starting multi-threaded tests: num_threads=16, NUM_CPUS=16
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 3824: pinned new thread to CPU=0x0
+KP: 3824: pinned new thread to CPU=0x1
+KP: 3824: pinned new thread to CPU=0x2
+KP: 3824: pinned new thread to CPU=0x3
+KP: 3824: pinned new thread to CPU=0x4
+KP: 3824: pinned new thread to CPU=0x5
+KP: 3824: pinned new thread to CPU=0x6
+KP: 3824: pinned new thread to CPU=0x7
+KP: 3824: pinned new thread to CPU=0x8
+KP: 3824: pinned new thread to CPU=0x9
+KP: 3824: pinned new thread to CPU=0xA
+KP: 3824: pinned new thread to CPU=0xB
+KP: 3824: pinned new thread to CPU=0xC
+KP: 3824: pinned new thread to CPU=0xD
+KP: 3824: pinned new thread to CPU=0xE
+KP: 3824: pinned new thread to CPU=0xF
+KP: 3824: sleeping to allow threads enough time
+KP: 3824: waking up from sleep (0)
+For multithreaded run ramp r:-1-w:30-u:70-d:1
+	 544 total ops (538 puts + 0 gets + 6 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000272 ops/usec
+	 269.000000 op/sec put throughput (all threads)
+	 0.000000 op/sec get throughput (all threads)
+	 3.000000 op/sec del throughput (all threads)
+	 272.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 68 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 3824: pinned new thread to CPU=0x0
+KP: 3824: pinned new thread to CPU=0x1
+KP: 3824: pinned new thread to CPU=0x2
+KP: 3824: pinned new thread to CPU=0x3
+KP: 3824: pinned new thread to CPU=0x4
+KP: 3824: pinned new thread to CPU=0x5
+KP: 3824: pinned new thread to CPU=0x6
+KP: 3824: pinned new thread to CPU=0x7
+KP: 3824: pinned new thread to CPU=0x8
+KP: 3824: pinned new thread to CPU=0x9
+KP: 3824: pinned new thread to CPU=0xA
+KP: 3824: pinned new thread to CPU=0xB
+KP: 3824: pinned new thread to CPU=0xC
+KP: 3824: pinned new thread to CPU=0xD
+KP: 3824: pinned new thread to CPU=0xE
+KP: 3824: pinned new thread to CPU=0xF
+KP: 3824: sleeping to allow threads enough time
+KP: 3824: waking up from sleep (0)
+For multithreaded run ramp r:19-w:24-u:56-d:1
+	 674 total ops (517 puts + 154 gets + 3 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000337 ops/usec
+	 258.500000 op/sec put throughput (all threads)
+	 77.000000 op/sec get throughput (all threads)
+	 1.500000 op/sec del throughput (all threads)
+	 337.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 65 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 3824: pinned new thread to CPU=0x0
+KP: 3824: pinned new thread to CPU=0x1
+KP: 3824: pinned new thread to CPU=0x2
+KP: 3824: pinned new thread to CPU=0x3
+KP: 3824: pinned new thread to CPU=0x4
+KP: 3824: pinned new thread to CPU=0x5
+KP: 3824: pinned new thread to CPU=0x6
+KP: 3824: pinned new thread to CPU=0x7
+KP: 3824: pinned new thread to CPU=0x8
+KP: 3824: pinned new thread to CPU=0x9
+KP: 3824: pinned new thread to CPU=0xA
+KP: 3824: pinned new thread to CPU=0xB
+KP: 3824: pinned new thread to CPU=0xC
+KP: 3824: pinned new thread to CPU=0xD
+KP: 3824: pinned new thread to CPU=0xE
+KP: 3824: pinned new thread to CPU=0xF
+KP: 3824: sleeping to allow threads enough time
+KP: 3824: waking up from sleep (0)
+For multithreaded run ramp r:39-w:18-u:42-d:1
+	 859 total ops (481 puts + 371 gets + 7 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000430 ops/usec
+	 240.500000 op/sec put throughput (all threads)
+	 185.500000 op/sec get throughput (all threads)
+	 3.500000 op/sec del throughput (all threads)
+	 429.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 61 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 3824: pinned new thread to CPU=0x0
+KP: 3824: pinned new thread to CPU=0x1
+KP: 3824: pinned new thread to CPU=0x2
+KP: 3824: pinned new thread to CPU=0x3
+KP: 3824: pinned new thread to CPU=0x4
+KP: 3824: pinned new thread to CPU=0x5
+KP: 3824: pinned new thread to CPU=0x6
+KP: 3824: pinned new thread to CPU=0x7
+KP: 3824: pinned new thread to CPU=0x8
+KP: 3824: pinned new thread to CPU=0x9
+KP: 3824: pinned new thread to CPU=0xA
+KP: 3824: pinned new thread to CPU=0xB
+KP: 3824: pinned new thread to CPU=0xC
+KP: 3824: pinned new thread to CPU=0xD
+KP: 3824: pinned new thread to CPU=0xE
+KP: 3824: pinned new thread to CPU=0xF
+KP: 3824: sleeping to allow threads enough time
+KP: 3824: waking up from sleep (0)
+For multithreaded run ramp r:59-w:12-u:28-d:1
+	 1308 total ops (475 puts + 820 gets + 13 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000654 ops/usec
+	 237.500000 op/sec put throughput (all threads)
+	 410.000000 op/sec get throughput (all threads)
+	 6.500000 op/sec del throughput (all threads)
+	 654.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 61 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 3824: pinned new thread to CPU=0x0
+KP: 3824: pinned new thread to CPU=0x1
+KP: 3824: pinned new thread to CPU=0x2
+KP: 3824: pinned new thread to CPU=0x3
+KP: 3824: pinned new thread to CPU=0x4
+KP: 3824: pinned new thread to CPU=0x5
+KP: 3824: pinned new thread to CPU=0x6
+KP: 3824: pinned new thread to CPU=0x7
+KP: 3824: pinned new thread to CPU=0x8
+KP: 3824: pinned new thread to CPU=0x9
+KP: 3824: pinned new thread to CPU=0xA
+KP: 3824: pinned new thread to CPU=0xB
+KP: 3824: pinned new thread to CPU=0xC
+KP: 3824: pinned new thread to CPU=0xD
+KP: 3824: pinned new thread to CPU=0xE
+KP: 3824: pinned new thread to CPU=0xF
+KP: 3824: sleeping to allow threads enough time
+KP: 3824: waking up from sleep (0)
+For multithreaded run ramp r:79-w:6-u:14-d:1
+	 2471 total ops (487 puts + 1967 gets + 17 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.001235 ops/usec
+	 243.500000 op/sec put throughput (all threads)
+	 983.500061 op/sec get throughput (all threads)
+	 8.500000 op/sec del throughput (all threads)
+	 1235.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 63 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 31
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 3824: pinned new thread to CPU=0x0
+KP: 3824: pinned new thread to CPU=0x1
+KP: 3824: pinned new thread to CPU=0x2
+KP: 3824: pinned new thread to CPU=0x3
+KP: 3824: pinned new thread to CPU=0x4
+KP: 3824: pinned new thread to CPU=0x5
+KP: 3824: pinned new thread to CPU=0x6
+KP: 3824: pinned new thread to CPU=0x7
+KP: 3824: pinned new thread to CPU=0x8
+KP: 3824: pinned new thread to CPU=0x9
+KP: 3824: pinned new thread to CPU=0xA
+KP: 3824: pinned new thread to CPU=0xB
+KP: 3824: pinned new thread to CPU=0xC
+KP: 3824: pinned new thread to CPU=0xD
+KP: 3824: pinned new thread to CPU=0xE
+KP: 3824: pinned new thread to CPU=0xF
+KP: 3824: sleeping to allow threads enough time
+KP: 3824: waking up from sleep (0)
+For multithreaded run ramp r:99-w:0-u:0-d:1
+	 45514 total ops (0 puts + 45026 gets + 488 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.022757 ops/usec
+	 0.000000 op/sec put throughput (all threads)
+	 22513.000000 op/sec get throughput (all threads)
+	 244.000000 op/sec del throughput (all threads)
+	 22757.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 61 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 2389
+***END OF RAMP-UP-THREADS OUTPUT***
+
+***CONCLUDING THREAD EVALUATION***

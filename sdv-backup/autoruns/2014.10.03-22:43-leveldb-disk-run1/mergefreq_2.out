@@ -1,0 +1,137 @@
+KP: 3872: Using 4 for local hash table size (same as merge frequency), 1610000 for master hash table size
+KP: 3872: Total memory allocation size (just evaluation, not kv stores themselves) could be up to 0 bytes (0 MB)
+Will create 1610000 random integers for each child thread
+Now starting evaluation for key-value store: LevelDB
+On 16 cores
+Running on storage platform: disk
+Starting single-threaded tests
+
+*** BEGINING SINGLE THREADED TESTS***
+
+ON PATH /home/katelin/leveldb_client_name
+***NOW DOING LATENCY TEST ON INDIVIDUAL FUNCTIONS ***
+For put-insert: 
+	 time elapsed 18:62272 (sec:usec) = 18062272 usecs 
+	 iterations 1000 (merge every 2 -> 500 merges)
+	 average cost 18062.271484 usecs
+	 Conflicts: 0 (of 499 commits)
+
+For put-append: 
+	 time elapsed 52:902223 (sec:usec) = 52902223 usecs 
+	 iterations 3000 (merge every 2 -> 1500 merges)
+	 average cost 17634.074219 usecs
+	 Conflicts: 0 (of 1497 commits)
+
+For get: 
+	 time elapsed 0:99728 (sec:usec) = 99728 usecs 
+	 iterations 3000 (merge every 2 -> 1500 merges)
+	 average cost 33.242668 usecs
+	 Conflicts: 0 (of 0 commits)
+
+For delete: 
+	 time elapsed 52:920157 (sec:usec) = 52920157 usecs 
+	 iterations 3000 (merge every 2 -> 1500 merges)
+	 average cost 17640.052734 usecs
+	 Conflicts: 0 (of 1497 commits)
+
+
+*** CONCLUDING SINGLE THREADED TESTS***
+
+Starting multi-threaded tests: num_threads=1, NUM_CPUS=16
+ON PATH /home/katelin/leveldb_client_name
+KP: 3872: pinned new thread to CPU=0x0
+KP: 3872: sleeping to allow threads enough time
+KP: 3872: waking up from sleep (0)
+For multithreaded run ramp r:-1-w:30-u:70-d:1
+	 96 total ops (92 puts + 0 gets + 4 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000048 ops/usec
+	 46.000000 op/sec put throughput (all threads)
+	 0.000000 op/sec get throughput (all threads)
+	 2.000000 op/sec del throughput (all threads)
+	 48.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 48 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /home/katelin/leveldb_client_name
+KP: 3872: pinned new thread to CPU=0x0
+KP: 3872: sleeping to allow threads enough time
+KP: 3872: waking up from sleep (0)
+For multithreaded run ramp r:19-w:24-u:56-d:1
+	 115 total ops (89 puts + 21 gets + 5 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000058 ops/usec
+	 44.500000 op/sec put throughput (all threads)
+	 10.500000 op/sec get throughput (all threads)
+	 2.500000 op/sec del throughput (all threads)
+	 57.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 47 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 1
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /home/katelin/leveldb_client_name
+KP: 3872: pinned new thread to CPU=0x0
+KP: 3872: sleeping to allow threads enough time
+KP: 3872: waking up from sleep (0)
+For multithreaded run ramp r:39-w:18-u:42-d:1
+	 139 total ops (81 puts + 55 gets + 3 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000069 ops/usec
+	 40.500000 op/sec put throughput (all threads)
+	 27.500000 op/sec get throughput (all threads)
+	 1.500000 op/sec del throughput (all threads)
+	 69.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 42 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 5
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /home/katelin/leveldb_client_name
+KP: 3872: pinned new thread to CPU=0x0
+KP: 3872: sleeping to allow threads enough time
+KP: 3872: waking up from sleep (0)
+For multithreaded run ramp r:59-w:12-u:28-d:1
+	 275 total ops (106 puts + 163 gets + 6 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000137 ops/usec
+	 53.000000 op/sec put throughput (all threads)
+	 81.500000 op/sec get throughput (all threads)
+	 3.000000 op/sec del throughput (all threads)
+	 137.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 56 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 22
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /home/katelin/leveldb_client_name
+KP: 3872: pinned new thread to CPU=0x0
+KP: 3872: sleeping to allow threads enough time
+KP: 3872: waking up from sleep (0)
+For multithreaded run ramp r:79-w:6-u:14-d:1
+	 497 total ops (95 puts + 395 gets + 7 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000249 ops/usec
+	 47.500000 op/sec put throughput (all threads)
+	 197.500000 op/sec get throughput (all threads)
+	 3.500000 op/sec del throughput (all threads)
+	 248.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 51 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 19
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /home/katelin/leveldb_client_name
+KP: 3872: pinned new thread to CPU=0x0
+KP: 3872: sleeping to allow threads enough time
+KP: 3872: waking up from sleep (0)
+For multithreaded run ramp r:99-w:0-u:0-d:1
+	 8628 total ops (0 puts + 8544 gets + 84 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.004314 ops/usec
+	 0.000000 op/sec put throughput (all threads)
+	 4272.000000 op/sec get throughput (all threads)
+	 42.000000 op/sec del throughput (all threads)
+	 4314.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 42 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 8451
+***END OF RAMP-UP-THREADS OUTPUT***
+
+***CONCLUDING THREAD EVALUATION***

@@ -1,0 +1,130 @@
+KP: 256: Using 128 for local hash table size (same as merge frequency), 1610000 for master hash table size
+KP: 256: Total memory allocation size (just evaluation, not kv stores themselves) could be up to 0 bytes (0 MB)
+Will create 1610000 random integers for each child thread
+Now starting evaluation for key-value store: kp_kvstore
+On 16 cores
+Running on storage platform: disk
+Starting single-threaded tests
+
+*** BEGINING SINGLE THREADED TESTS***
+
+***NOW DOING LATENCY TEST ON INDIVIDUAL FUNCTIONS ***
+For put-insert: 
+	 time elapsed 0:80820 (sec:usec) = 80820 usecs 
+	 iterations 25000 (merge every 64 -> 390 merges)
+	 average cost 3.232800 usecs
+	 Conflicts: 0 (of 391 commits)
+
+For put-append: 
+	 time elapsed 0:209469 (sec:usec) = 209469 usecs 
+	 iterations 75000 (merge every 64 -> 1171 merges)
+	 average cost 2.792920 usecs
+	 Conflicts: 0 (of 1173 commits)
+
+For get: 
+	 time elapsed 0:140130 (sec:usec) = 140130 usecs 
+	 iterations 75000 (merge every 64 -> 1171 merges)
+	 average cost 1.868400 usecs
+	 Conflicts: 0 (of 0 commits)
+
+For delete: 
+	 time elapsed 0:138421 (sec:usec) = 138421 usecs 
+	 iterations 75000 (merge every 64 -> 1171 merges)
+	 average cost 1.845613 usecs
+	 Conflicts: 0 (of 1173 commits)
+
+
+*** CONCLUDING SINGLE THREADED TESTS***
+
+Starting multi-threaded tests: num_threads=1, NUM_CPUS=16
+KP: 256: pinned new thread to CPU=0x0
+KP: 256: sleeping to allow threads enough time
+KP: 256: waking up from sleep (0)
+For multithreaded run ramp r:-1-w:30-u:70-d:1
+	 1307533 total ops (1294323 puts + 0 gets + 13210 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.653767 ops/usec
+	 647161.500000 op/sec put throughput (all threads)
+	 0.000000 op/sec get throughput (all threads)
+	 6605.000000 op/sec del throughput (all threads)
+	 653766.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 20431 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+KP: 256: pinned new thread to CPU=0x0
+KP: 256: sleeping to allow threads enough time
+KP: 256: waking up from sleep (0)
+For multithreaded run ramp r:19-w:24-u:56-d:1
+	 1467879 total ops (1158395 puts + 294637 gets + 14847 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.733940 ops/usec
+	 579197.437500 op/sec put throughput (all threads)
+	 147318.500000 op/sec get throughput (all threads)
+	 7423.500000 op/sec del throughput (all threads)
+	 733939.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 18332 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+KP: 256: pinned new thread to CPU=0x0
+KP: 256: sleeping to allow threads enough time
+KP: 256: waking up from sleep (0)
+For multithreaded run ramp r:39-w:18-u:42-d:1
+	 1690341 total ops (997613 puts + 676117 gets + 16611 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.845170 ops/usec
+	 498806.500000 op/sec put throughput (all threads)
+	 338058.500000 op/sec get throughput (all threads)
+	 8305.500000 op/sec del throughput (all threads)
+	 845170.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 15848 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+KP: 256: pinned new thread to CPU=0x0
+KP: 256: sleeping to allow threads enough time
+KP: 256: waking up from sleep (0)
+For multithreaded run ramp r:59-w:12-u:28-d:1
+	 1991178 total ops (776594 puts + 1194971 gets + 19613 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.995589 ops/usec
+	 388297.000000 op/sec put throughput (all threads)
+	 597485.500000 op/sec get throughput (all threads)
+	 9806.500000 op/sec del throughput (all threads)
+	 995589.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 12441 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+KP: 256: pinned new thread to CPU=0x0
+KP: 256: sleeping to allow threads enough time
+KP: 256: waking up from sleep (0)
+For multithreaded run ramp r:79-w:6-u:14-d:1
+	 2467316 total ops (468473 puts + 1974531 gets + 24312 dels)
+	 2000000 in runtime (usecs) = 2 secs = 1.233658 ops/usec
+	 234236.500000 op/sec put throughput (all threads)
+	 987265.500000 op/sec get throughput (all threads)
+	 12156.000000 op/sec del throughput (all threads)
+	 1233658.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 7700 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+KP: 256: pinned new thread to CPU=0x0
+KP: 256: sleeping to allow threads enough time
+KP: 256: waking up from sleep (0)
+For multithreaded run ramp r:99-w:0-u:0-d:1
+	 3513983 total ops (0 puts + 3478153 gets + 35830 dels)
+	 2000000 in runtime (usecs) = 2 secs = 1.756992 ops/usec
+	 0.000000 op/sec put throughput (all threads)
+	 1739076.500000 op/sec get throughput (all threads)
+	 17915.000000 op/sec del throughput (all threads)
+	 1756991.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 560 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+***CONCLUDING THREAD EVALUATION***

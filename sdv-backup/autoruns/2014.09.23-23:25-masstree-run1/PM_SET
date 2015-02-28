@@ -1,0 +1,19 @@
+IVT SDV parameters
+---------------------------------------------------------
+System configuration
+---------------------------------------------------------
+MAX_NPROCS : 16
+CPU_FREQ : 2600 MHz
+---------------------------------------------------------
+User configured : 
+---------------------------------------------------------
+PM_LATENCY(400 ns)
+DUMMY(0 ns)
+---------------------------------------------------------
+Auto computed : 
+---------------------------------------------------------
+MLC_MISS_LLC_HIT_LATENCY(12 ns)
+LLC_MISS_LATENCY(98 ns)
+EXTRA_LD_LATENCY(305 ns)
+COALESCING_FACTOR : 64
+SKID(0xffffffffffffffff)

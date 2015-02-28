@@ -1,0 +1,104 @@
+AR = ar
+CC = gcc
+CXX = g++ -std=gnu++0x
+CFLAGS = -g -W -Wall -O2 -fPIC
+DEPSDIR := .deps
+DEPCFLAGS = -MD -MF $(DEPSDIR)/$*.d -MP
+ifeq ($(strip $(MEMMGR)), )
+  MEMMGR = 
+endif
+ifneq ($(strip $(KEYSWAP)), )
+  CFLAGS += -DKEYSWAP
+endif
+ifneq ($(strip $(NOPREFETCH)), )
+  CFLAGS += -DNOPREFETCH
+endif
+ifneq ($(strip $(NOSUPERPAGE)), )
+  CFLAGS += -DNOSUPERPAGE
+endif
+LIBS = -lrt  -lpthread -lm
+LDFLAGS = 
+
+all: test_atomics mtd mtclient mttest
+
+%.o: %.c config.h $(DEPSDIR)/stamp
+	$(CXX) $(CFLAGS) $(DEPCFLAGS) -c -o $@ $<
+
+%.o: %.cc config.h $(DEPSDIR)/stamp
+	$(CXX) $(CFLAGS) $(DEPCFLAGS) -c -o $@ $<
+
+%.S: %.o
+	objdump -S $< > $@
+
+libjson.a: json.o string.o straccum.o hashallocator.o clp.o kvrandom.o compiler.o kvthread.o str.o
+	@/bin/rm -f $@
+	$(AR) cru $@ $^
+
+KVTREES = masstree.o \
+	kvtable.o kvr_timed_str.o kvr_timed_array.o kvr_timed_array_ver.o perfstat.o \
+	string_slice.o
+
+mtd: mtd.o log.o checkpoint.o file.o misc.o $(KVTREES) \
+	kvio.o libjson.a
+	$(CXX) $(CFLAGS) -o $@ $^ $(MEMMGR) $(LDFLAGS) $(LIBS)
+
+mtclient: mtclient.o misc.o kvio.o libjson.a
+	$(CXX) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(LIBS)
+
+mttest: mttest.o misc.o checkpoint.o $(KVTREES) \
+	kvio.o libjson.a
+	$(CXX) $(CFLAGS) -o $@ $^ $(MEMMGR) $(LDFLAGS) $(LIBS)
+
+test_string: test_string.o string.o straccum.o
+	$(CXX) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(LIBS)
+
+test_atomics: test_atomics.o string.o straccum.o kvrandom.o json.o
+	$(CXX) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(LIBS)
+
+
+MTSHAREDLIBVER	= 1.0.1
+MTSHAREDSO	= libmasstree.so
+MTSHAREDSONAME	= $(MTSHAREDSO).1
+MTSHAREDLIBNAME	= $(MTSHAREDSO).$(MTSHAREDLIBVER)
+MTLIBOBJECTS	= misc.o checkpoint.o $(KVTREES) kvio.o libjson.a \
+	mt_c_wrappers.cc
+shared_lib_clean:
+	rm -f libmasstree.*
+shared_lib:	shared_lib_clean $(MTLIBOBJECTS)
+	$(CXX) $(LDFLAGS) -shared -Wl,-soname,$(MTSHAREDSONAME) \
+		-o $(MTSHAREDLIBNAME) $(MTLIBOBJECTS) $(LIBS) -fPIC
+	ln -s $(MTSHAREDLIBNAME) $(MTSHAREDSONAME)
+	ln -s $(MTSHAREDLIBNAME) $(MTSHAREDSO)
+
+
+config.h: stamp-h
+
+GNUmakefile: GNUmakefile.in config.status
+	CONFIG_FILES=$@ CONFIG_HEADERS= $(SHELL) ./config.status
+
+configure config.h.in: configure.ac
+	autoreconf -i
+	touch config.h.in
+
+config.status: configure
+	./configure  '--enable-max-key-len=256' '--enable-max-row-len=8192'
+
+$(DEPSDIR)/stamp:
+	mkdir -p $(DEPSDIR)
+	touch $@
+
+stamp-h: config.h.in config.status
+	CONFIG_FILES= $(SHELL) ./config.status
+	echo > stamp-h
+
+clean:
+	rm -f mtd mtclient mttest test_string test_atomics *.o libjson.a
+	rm -rf .deps
+	rm -rf libmasstree.*
+
+DEPFILES := $(wildcard $(DEPSDIR)/*.d)
+ifneq ($(DEPFILES),)
+include $(DEPFILES)
+endif
+
+.PHONY: clean all

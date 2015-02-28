@@ -1,0 +1,3 @@
+2014.09.16-13:15-kpvm-dram-run3			native
+2014.09.16-17:05-leveldb-ramdisk-run1  		numactl, 500ns, small wset, no flush
+2014.09.16-18:15-leveldb-ramdisk-run1		numactl, 500ns, big wset, no flush

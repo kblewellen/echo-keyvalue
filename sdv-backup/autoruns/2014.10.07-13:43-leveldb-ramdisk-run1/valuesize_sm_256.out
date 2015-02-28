@@ -1,0 +1,19 @@
+KP: 2112: Using 16 for local hash table size (same as merge frequency), 1610000 for master hash table size
+KP: 2112: Total memory allocation size (just evaluation, not kv stores themselves) could be up to 0 bytes (0 MB)
+Will create 1610000 random integers for each child thread
+Now starting evaluation for key-value store: LevelDB
+On 16 cores
+Running on storage platform: ramdisk
+Starting single-threaded tests
+
+*** BEGINING SINGLE THREADED TESTS***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+Starting multi-threaded tests: num_threads=1, NUM_CPUS=16
+ON PATH /mnt/pmfs/leveldb_client_name
+ON PATH /mnt/pmfs/leveldb_client_name
+ON PATH /mnt/pmfs/leveldb_client_name
+ON PATH /mnt/pmfs/leveldb_client_name
+ON PATH /mnt/pmfs/leveldb_client_name
+ON PATH /mnt/pmfs/leveldb_client_name
+***CONCLUDING THREAD EVALUATION***

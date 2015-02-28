@@ -1,0 +1,137 @@
+KP: 4624: Using 16 for local hash table size (same as merge frequency), 1610000 for master hash table size
+KP: 4624: Total memory allocation size (just evaluation, not kv stores themselves) could be up to 0 bytes (0 MB)
+Will create 1610000 random integers for each child thread
+Now starting evaluation for key-value store: LevelDB
+On 16 cores
+Running on storage platform: ramdisk
+Starting single-threaded tests
+
+*** BEGINING SINGLE THREADED TESTS***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+***NOW DOING LATENCY TEST ON INDIVIDUAL FUNCTIONS ***
+For put-insert: 
+	 time elapsed 0:90596 (sec:usec) = 90596 usecs 
+	 iterations 8192 (merge every 8 -> 1024 merges)
+	 average cost 11.059082 usecs
+	 Conflicts: 0 (of 1023 commits)
+
+For put-append: 
+	 time elapsed 0:298984 (sec:usec) = 298984 usecs 
+	 iterations 24576 (merge every 8 -> 3072 merges)
+	 average cost 12.165690 usecs
+	 Conflicts: 0 (of 3069 commits)
+
+For get: 
+	 time elapsed 0:984176 (sec:usec) = 984176 usecs 
+	 iterations 24576 (merge every 8 -> 3072 merges)
+	 average cost 40.046223 usecs
+	 Conflicts: 0 (of 0 commits)
+
+For delete: 
+	 time elapsed 0:138963 (sec:usec) = 138963 usecs 
+	 iterations 24576 (merge every 8 -> 3072 merges)
+	 average cost 5.654419 usecs
+	 Conflicts: 0 (of 3069 commits)
+
+
+*** CONCLUDING SINGLE THREADED TESTS***
+
+Starting multi-threaded tests: num_threads=1, NUM_CPUS=16
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 4624: pinned new thread to CPU=0x0
+KP: 4624: sleeping to allow threads enough time
+KP: 4624: waking up from sleep (0)
+For multithreaded run ramp r:-1-w:30-u:70-d:1
+	 131200 total ops (129878 puts + 0 gets + 1322 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.065600 ops/usec
+	 64939.000000 op/sec put throughput (all threads)
+	 0.000000 op/sec get throughput (all threads)
+	 661.000000 op/sec del throughput (all threads)
+	 65600.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 16400 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 4624: pinned new thread to CPU=0x0
+KP: 4624: sleeping to allow threads enough time
+KP: 4624: waking up from sleep (0)
+For multithreaded run ramp r:19-w:24-u:56-d:1
+	 159334 total ops (125956 puts + 31766 gets + 1612 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.079667 ops/usec
+	 62978.000000 op/sec put throughput (all threads)
+	 15883.000000 op/sec get throughput (all threads)
+	 806.000000 op/sec del throughput (all threads)
+	 79667.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 15946 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 593
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 4624: pinned new thread to CPU=0x0
+KP: 4624: sleeping to allow threads enough time
+KP: 4624: waking up from sleep (0)
+For multithreaded run ramp r:39-w:18-u:42-d:1
+	 219647 total ops (129530 puts + 87927 gets + 2190 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.109824 ops/usec
+	 64765.000000 op/sec put throughput (all threads)
+	 43963.500000 op/sec get throughput (all threads)
+	 1095.000122 op/sec del throughput (all threads)
+	 109823.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 16465 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 1906
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 4624: pinned new thread to CPU=0x0
+KP: 4624: sleeping to allow threads enough time
+KP: 4624: waking up from sleep (0)
+For multithreaded run ramp r:59-w:12-u:28-d:1
+	 305087 total ops (118625 puts + 183391 gets + 3071 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.152544 ops/usec
+	 59312.500000 op/sec put throughput (all threads)
+	 91695.500000 op/sec get throughput (all threads)
+	 1535.500000 op/sec del throughput (all threads)
+	 152543.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 15212 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 6761
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 4624: pinned new thread to CPU=0x0
+KP: 4624: sleeping to allow threads enough time
+KP: 4624: waking up from sleep (0)
+For multithreaded run ramp r:79-w:6-u:14-d:1
+	 528943 total ops (100555 puts + 423207 gets + 5181 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.264472 ops/usec
+	 50277.500000 op/sec put throughput (all threads)
+	 211603.500000 op/sec get throughput (all threads)
+	 2590.500000 op/sec del throughput (all threads)
+	 264471.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 13217 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 29490
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 4624: pinned new thread to CPU=0x0
+KP: 4624: sleeping to allow threads enough time
+KP: 4624: waking up from sleep (0)
+For multithreaded run ramp r:99-w:0-u:0-d:1
+	 2305335 total ops (0 puts + 2282456 gets + 22879 dels)
+	 2000000 in runtime (usecs) = 2 secs = 1.152668 ops/usec
+	 0.000000 op/sec put throughput (all threads)
+	 1141228.000000 op/sec get throughput (all threads)
+	 11439.500000 op/sec del throughput (all threads)
+	 1152667.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 2860 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 2281385
+***END OF RAMP-UP-THREADS OUTPUT***
+
+***CONCLUDING THREAD EVALUATION***

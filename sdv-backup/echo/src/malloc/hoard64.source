@@ -1,0 +1,4 @@
+CWD=`pwd -P`
+ln -s ${CWD}/hoard/libhoard64.so ${CWD}/hoard/libhoard.so
+export LD_PRELOAD=${CWD}/hoard/libhoard.so
+echo "LD_PRELOAD set to $LD_PRELOAD; hoard will now be used instead of glibc malloc"

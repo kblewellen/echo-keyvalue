@@ -1,0 +1,203 @@
+KP: 8288: Using 16 for local hash table size (same as merge frequency), 1610000 for master hash table size
+KP: 8288: Total memory allocation size (just evaluation, not kv stores themselves) could be up to 0 bytes (0 MB)
+Will create 134166 random integers for each child thread
+Now starting evaluation for key-value store: LevelDB
+On 16 cores
+Running on storage platform: ramdisk
+Starting single-threaded tests
+
+*** BEGINING SINGLE THREADED TESTS***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+***NOW DOING LATENCY TEST ON INDIVIDUAL FUNCTIONS ***
+For put-insert: 
+	 time elapsed 4:102006 (sec:usec) = 4102006 usecs 
+	 iterations 1000 (merge every 8 -> 125 merges)
+	 average cost 4102.005859 usecs
+	 Conflicts: 0 (of 124 commits)
+
+For put-append: 
+	 time elapsed 13:581056 (sec:usec) = 13581056 usecs 
+	 iterations 3000 (merge every 8 -> 375 merges)
+	 average cost 4527.018555 usecs
+	 Conflicts: 0 (of 372 commits)
+
+For get: 
+	 time elapsed 0:103068 (sec:usec) = 103068 usecs 
+	 iterations 3000 (merge every 8 -> 375 merges)
+	 average cost 34.355999 usecs
+	 Conflicts: 0 (of 0 commits)
+
+For delete: 
+	 time elapsed 13:465179 (sec:usec) = 13465179 usecs 
+	 iterations 3000 (merge every 8 -> 375 merges)
+	 average cost 4488.393066 usecs
+	 Conflicts: 0 (of 372 commits)
+
+
+*** CONCLUDING SINGLE THREADED TESTS***
+
+Starting multi-threaded tests: num_threads=12, NUM_CPUS=16
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 8288: pinned new thread to CPU=0x0
+KP: 8288: pinned new thread to CPU=0x1
+KP: 8288: pinned new thread to CPU=0x2
+KP: 8288: pinned new thread to CPU=0x3
+KP: 8288: pinned new thread to CPU=0x4
+KP: 8288: pinned new thread to CPU=0x5
+KP: 8288: pinned new thread to CPU=0x6
+KP: 8288: pinned new thread to CPU=0x7
+KP: 8288: pinned new thread to CPU=0x8
+KP: 8288: pinned new thread to CPU=0x9
+KP: 8288: pinned new thread to CPU=0xA
+KP: 8288: pinned new thread to CPU=0xB
+KP: 8288: sleeping to allow threads enough time
+KP: 8288: waking up from sleep (0)
+For multithreaded run ramp r:-1-w:30-u:70-d:1
+	 520 total ops (514 puts + 0 gets + 6 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000260 ops/usec
+	 257.000000 op/sec put throughput (all threads)
+	 0.000000 op/sec get throughput (all threads)
+	 3.000000 op/sec del throughput (all threads)
+	 260.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 65 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 8288: pinned new thread to CPU=0x0
+KP: 8288: pinned new thread to CPU=0x1
+KP: 8288: pinned new thread to CPU=0x2
+KP: 8288: pinned new thread to CPU=0x3
+KP: 8288: pinned new thread to CPU=0x4
+KP: 8288: pinned new thread to CPU=0x5
+KP: 8288: pinned new thread to CPU=0x6
+KP: 8288: pinned new thread to CPU=0x7
+KP: 8288: pinned new thread to CPU=0x8
+KP: 8288: pinned new thread to CPU=0x9
+KP: 8288: pinned new thread to CPU=0xA
+KP: 8288: pinned new thread to CPU=0xB
+KP: 8288: sleeping to allow threads enough time
+KP: 8288: waking up from sleep (0)
+For multithreaded run ramp r:19-w:24-u:56-d:1
+	 642 total ops (513 puts + 122 gets + 7 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000321 ops/usec
+	 256.500000 op/sec put throughput (all threads)
+	 61.000000 op/sec get throughput (all threads)
+	 3.500000 op/sec del throughput (all threads)
+	 321.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 65 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 8288: pinned new thread to CPU=0x0
+KP: 8288: pinned new thread to CPU=0x1
+KP: 8288: pinned new thread to CPU=0x2
+KP: 8288: pinned new thread to CPU=0x3
+KP: 8288: pinned new thread to CPU=0x4
+KP: 8288: pinned new thread to CPU=0x5
+KP: 8288: pinned new thread to CPU=0x6
+KP: 8288: pinned new thread to CPU=0x7
+KP: 8288: pinned new thread to CPU=0x8
+KP: 8288: pinned new thread to CPU=0x9
+KP: 8288: pinned new thread to CPU=0xA
+KP: 8288: pinned new thread to CPU=0xB
+KP: 8288: sleeping to allow threads enough time
+KP: 8288: waking up from sleep (0)
+For multithreaded run ramp r:39-w:18-u:42-d:1
+	 787 total ops (473 puts + 307 gets + 7 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000393 ops/usec
+	 236.500000 op/sec put throughput (all threads)
+	 153.500000 op/sec get throughput (all threads)
+	 3.500000 op/sec del throughput (all threads)
+	 393.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 60 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 8288: pinned new thread to CPU=0x0
+KP: 8288: pinned new thread to CPU=0x1
+KP: 8288: pinned new thread to CPU=0x2
+KP: 8288: pinned new thread to CPU=0x3
+KP: 8288: pinned new thread to CPU=0x4
+KP: 8288: pinned new thread to CPU=0x5
+KP: 8288: pinned new thread to CPU=0x6
+KP: 8288: pinned new thread to CPU=0x7
+KP: 8288: pinned new thread to CPU=0x8
+KP: 8288: pinned new thread to CPU=0x9
+KP: 8288: pinned new thread to CPU=0xA
+KP: 8288: pinned new thread to CPU=0xB
+KP: 8288: sleeping to allow threads enough time
+KP: 8288: waking up from sleep (0)
+For multithreaded run ramp r:59-w:12-u:28-d:1
+	 1251 total ops (463 puts + 779 gets + 9 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.000625 ops/usec
+	 231.500000 op/sec put throughput (all threads)
+	 389.500000 op/sec get throughput (all threads)
+	 4.500000 op/sec del throughput (all threads)
+	 625.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 59 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 19
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 8288: pinned new thread to CPU=0x0
+KP: 8288: pinned new thread to CPU=0x1
+KP: 8288: pinned new thread to CPU=0x2
+KP: 8288: pinned new thread to CPU=0x3
+KP: 8288: pinned new thread to CPU=0x4
+KP: 8288: pinned new thread to CPU=0x5
+KP: 8288: pinned new thread to CPU=0x6
+KP: 8288: pinned new thread to CPU=0x7
+KP: 8288: pinned new thread to CPU=0x8
+KP: 8288: pinned new thread to CPU=0x9
+KP: 8288: pinned new thread to CPU=0xA
+KP: 8288: pinned new thread to CPU=0xB
+KP: 8288: sleeping to allow threads enough time
+KP: 8288: waking up from sleep (0)
+For multithreaded run ramp r:79-w:6-u:14-d:1
+	 2398 total ops (435 puts + 1942 gets + 21 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.001199 ops/usec
+	 217.500000 op/sec put throughput (all threads)
+	 971.000000 op/sec get throughput (all threads)
+	 10.500000 op/sec del throughput (all threads)
+	 1199.000000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 57 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 0
+***END OF RAMP-UP-THREADS OUTPUT***
+
+ON PATH /mnt/pmfs/leveldb_client_name
+KP: 8288: pinned new thread to CPU=0x0
+KP: 8288: pinned new thread to CPU=0x1
+KP: 8288: pinned new thread to CPU=0x2
+KP: 8288: pinned new thread to CPU=0x3
+KP: 8288: pinned new thread to CPU=0x4
+KP: 8288: pinned new thread to CPU=0x5
+KP: 8288: pinned new thread to CPU=0x6
+KP: 8288: pinned new thread to CPU=0x7
+KP: 8288: pinned new thread to CPU=0x8
+KP: 8288: pinned new thread to CPU=0x9
+KP: 8288: pinned new thread to CPU=0xA
+KP: 8288: pinned new thread to CPU=0xB
+KP: 8288: sleeping to allow threads enough time
+KP: 8288: waking up from sleep (0)
+For multithreaded run ramp r:99-w:0-u:0-d:1
+	 44877 total ops (0 puts + 44437 gets + 440 dels)
+	 2000000 in runtime (usecs) = 2 secs = 0.022439 ops/usec
+	 0.000000 op/sec put throughput (all threads)
+	 22218.500000 op/sec get throughput (all threads)
+	 220.000000 op/sec del throughput (all threads)
+	 22438.500000 op/sec total throughput (all threads)
+	 Conflicts in worker thread: 0 (of 55 commits)
+	 Errors in worker thread: 0
+	 Put errors: 0, Del errors: 0, Get errors: 3212
+***END OF RAMP-UP-THREADS OUTPUT***
+
+***CONCLUDING THREAD EVALUATION***

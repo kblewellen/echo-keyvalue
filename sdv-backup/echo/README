@@ -1,0 +1,23 @@
+Files:
+	./include                 header files
+	./include/kp_kvstore.h    versioned key-value store interface
+
+	./lib                     local libraries
+
+	./src                     source code and testing code
+	./src/Makefile            Makefile
+	./src/obj/                object files go here, keep them out of the way
+	./src/kp_kvstore.c        versioned key-value store implementation
+//	./src/dummy_code.c        test harness...
+
+Projects in Makefile:
+	...
+//	dummytest: compiles dummy_code with kpvm to produce test code
+
+
+More about the project:
+	...
+
+Bugs / todos:
+	...
+
