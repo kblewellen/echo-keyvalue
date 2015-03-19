@@ -1,8 +1,0 @@
-Running evaluations, storing results in directory: output
-iterations 1000
-keysize 128
-valuesize 1024
-mergefreq 8
-putprob 0.1
-updateprob 0.7
-threads 1
